@@ -8,8 +8,9 @@ c=1
 while [ $c -le $b ];
 do
 echo *
-$c=`expr $c + 1`
+c=`expr $c + 1`
 done
-$b=`expr $b + 1`
+echo \n
+b=`expr $b + 1`
 done
 

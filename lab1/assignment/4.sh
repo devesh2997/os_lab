@@ -15,3 +15,4 @@ b=$c
 c=$d
 n=$(($n + 1))
 done
+printf "\n"

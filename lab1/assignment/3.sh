@@ -7,10 +7,10 @@ do
 c=1
 while [ $c -le $b ];
 do
-echo "*"
+printf "*"
 c=`expr $c + 1`
 done
-echo '\n'
+printf '\n'
 b=`expr $b + 1`
 done
 

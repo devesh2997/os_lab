@@ -1,7 +1,7 @@
 #!/bin/bash
 
-A = $1
-B = $2
+A=$1
+B=$2
 
 echo $A
 echo $B

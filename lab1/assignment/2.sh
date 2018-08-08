@@ -7,4 +7,4 @@ touch $A
 touch $B
 
 chmod 777 $A
-chmod 777 $A
+chmod 777 $B

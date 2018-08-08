@@ -17,6 +17,7 @@ cat $file_name
 "del")
 read file_name
 rm $file_name
+;;
 "ren")
 read old
 read new
@@ -26,6 +27,9 @@ mv $old $new
 read src
 read dest
 cp $src $dest
+;;
 *)
 echo "$command is not recognised as an external or internal command."
+;;
+esac
 done

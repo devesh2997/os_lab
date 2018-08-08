@@ -2,31 +2,24 @@
 
 while [ 1 -eq 1 ];
 do
-    read command
+    read command arg1 arg2
     case $command in
         "cd")
-            read loc
-            cd $loc
+            cd $arg1
         ;;
         "dir")ls
         ;;
         "type")
-            read file_name
-            cat $file_name
+            cat $arg1
         ;;
         "del")
-            read file_name
-            rm $file_name
+            rm $arg1
         ;;
         "ren")
-            read old
-            read new
-            mv $old $new
+            mv $arg1 $arg2
         ;;
         "copy")
-            read src
-            read dest
-            cp $src $dest
+            cp $arg1 $arg2
         ;;
         *)
             echo "$command is not recognised as an external or internal command."

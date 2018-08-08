@@ -5,4 +5,4 @@ b=6
 z=9
 c=`expr $A \* $b`
 
-echo c
+echo $c

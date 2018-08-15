@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-#include <dirent.h>
+#include<dirent.h>
 
 
 int main(int argc,char **argv)
@@ -14,11 +14,11 @@ int main(int argc,char **argv)
 	}
 	else if (argc == 1)
 	{
-		n=scandir(".",&namelist,NULL);
+		n=scandir(".",&namelist,NULL,alphasort);
 	}
 	else
 	{
-		n = scandir(argv[1], &namelist, NULL);
+		n = scandir(argv[1], &namelist, NULL, alphasort);
 	}
 	if(n < 0)
 	{

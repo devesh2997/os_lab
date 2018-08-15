@@ -13,7 +13,7 @@ int main(){
         sleep(2);
     }else{
         printf("Parent wait started\n");
-        wait();
+        wait(NULL);
         printf("Parent wait ended\n");
     }
 }

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <sys/wait.h>
 #include<sys/types.h>
 #include<unistd.h>
 int main(){
@@ -12,7 +13,7 @@ int main(){
         sleep(2);
     }else{
         printf("Parent wait started\n");
-        wait();
+        wait(NULL);
         printf("Parent wait ended\n");
     }
 }

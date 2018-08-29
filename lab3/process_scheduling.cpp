@@ -69,14 +69,14 @@ class ProcessScheduler{
                 }
                 curr_time++;
             }
-            int wt[n];
+            int wt[jobs_copy.size()];
             float sum = 0.0;
-            for(int i=0;i<n;i++){
+            for(int i=0;i<jobs_copy.size();i++){
                 wt[i] = ft[i] - jobs_copy[i].arrival_time;
                 sum+=wt[i];
             }
 
-            return (float)sum/n;
+            return (float)sum/jobs_copy.size();
         }
 };
 

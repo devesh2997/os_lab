@@ -12,7 +12,7 @@ struct job{
 class ProcessScheduler{
     vector<job> jobs;
     private:
-        bool sjcomparator(job a, job b){
+        static bool sjcomparator(job a, job b){
             return a.arrival_time < b.arrival_time && a.burst_time<b.burst_time;
         }
     public:

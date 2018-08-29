@@ -29,7 +29,7 @@ class ProcessScheduler{
                 if (wt[i] < 0)wt[i] = 0;
                 sum+=wt[i];
             }
-            return sum/n;
+            return (float)sum/n;
         }
         float sjf(){
             int n = jobs.size();
@@ -43,7 +43,11 @@ class ProcessScheduler{
                 if (wt[i] < 0)wt[i] = 0;
                 sum+=wt[i];
             }
-            return sum/n;
+            return (float)sum/n;
+        }
+        float srtf(){
+            int n = jobs.size();
+
         }
 };
 

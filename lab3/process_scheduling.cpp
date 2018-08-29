@@ -55,7 +55,7 @@ class ProcessScheduler{
                 int j;
                 int min = INT_MAX;
                 for(int i=0;i<jobs_copy.size();i++){
-                    if(jobs_copy[i].arrival_time>=curr_time){
+                    if(jobs_copy[i].arrival_time<=curr_time){
                         if(jobs_copy[i].burst_time!=0 && jobs_copy[i].burst_time<min){
                             min = jobs_copy[i].burst_time;
                             j = i;

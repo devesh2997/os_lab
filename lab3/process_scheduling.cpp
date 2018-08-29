@@ -46,8 +46,36 @@ class ProcessScheduler{
             return (float)sum/n;
         }
         float srtf(){
-            int n = jobs.size();
+            vector<job> jobs_copy(jobs);
+            int n = jobs_copy.size();
+            int curr_time = 0;
+            int ft[n];
+            while(n>0){
+                int j;
+                int min = INT_MAX;
+                for(int i=0;i<jobs_copy.size();i++){
+                    if(jobs_copy[i].arrival_time>=curr_time){
+                        if(jobs_copy[i].burst_time!=0 && jobs_copy[i].burst_time<min){
+                            min = jobs_copy[i].burst_time;
+                            j = i;
+                        }
+                    }
+                }
+                jobs_copy[j].burst_time-=1;
+                if(jobs_copy[j].burst_time==0){
+                    ft[j] = curr_time;
+                    n--;
+                }
+                curr_time++;
+            }
+            int wt[n];
+            float sum = 0.0;
+            for(int i=0;i<n;i++){
+                wt[i] = ft[i] - jobs_copy[i].arrival_time;
+                sum+=wt[i];
+            }
 
+            return (float)sum/n;
         }
 };
 
@@ -66,4 +94,5 @@ int main(){
     cout<<"Average waiting time for the processes is :\n";
     cout<<"FCFS :"<<scheduler.fcfs()<<endl;
     cout<<"SJF :"<<scheduler.sjf()<<endl;
+    cout<<"SRTF :"<<scheduler.srtf()<<endl;
 }

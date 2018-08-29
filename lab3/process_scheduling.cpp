@@ -59,5 +59,7 @@ int main(){
     }
 
     ProcessScheduler scheduler(jobs);
-    cout<<"Average waiting time for the processes is :"<<scheduler.fcfs()<<endl;
+    cout<<"Average waiting time for the processes is :\n";
+    cout<<"FCFS :"<<scheduler.fcfs()<<endl;
+    cout<<"SJF :"<<scheduler.sjf()<<endl;
 }
